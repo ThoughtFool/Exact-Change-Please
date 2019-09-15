@@ -6,6 +6,24 @@ denom = {
     "penny": 0.01
 };
 
+denomName = function (array, denom) {
+    // loop thru array and return new array:
+    let nameArr = [];
+    for (let i = 0; i < array.length; i++) {
+        for (name in denom) {
+            console.log("name");
+            console.log(name);
+            console.log("denom[name]");
+            console.log(denom[name]);
+            if (denom[name] == array[i]) {
+                nameArr.push(name);
+            };
+        };
+    }
+    console.log(nameArr);
+    return nameArr;
+};
+
 findChange = function (price, payment) {
     console.log("findChange function fires:");
 
@@ -17,17 +35,17 @@ findDenom = function (remainder, denom) {
     console.log("findDenom function fires:");
 
     for (name in denom) {
-            console.log("denom[name]");
-            console.log(denom[name]);
-            value = denom[name];
-            if (remainder >= value) {
-                console.log("remainder:");
-                console.log(remainder);
-                console.log("value:");
-                console.log(value);
+        console.log("denom[name]");
+        console.log(denom[name]);
+        value = denom[name];
+        if (remainder >= value) {
+            console.log("remainder:");
+            console.log(remainder);
+            console.log("value:");
+            console.log(value);
 
-                return makeChange(remainder, value);
-            }
+            return makeChange(remainder, value);
+        }
     }
 };
 
@@ -41,6 +59,10 @@ makeChange = function (change, denomination) {
 
     if (change < subDenom) {
         console.log("All change has been dispensed or change is too small to find a denomination.");
+        // convert denomValues into denomNames:
+        return denomName(counterArr, denom);
+        // return (counterArr);
+
     } else if (change >= denomination) {
         remainder = change - denomination;
         remainder = remainder.toFixed(2);
@@ -56,5 +78,7 @@ makeChange = function (change, denomination) {
     }
 };
 
-findChange(0.24, 1.81);
-// need to add larger denoms ($100, $50, etc.) and unique denoms ($2, .50, etc.)
+var changeArr = findChange(0.01, 2);
+console.log(changeArr);
+// need to return the denom names after function reaches 0.00;
+// need to add larger denoms ($100, $50, etc.) and unique denoms ($2, .50, etc.);
