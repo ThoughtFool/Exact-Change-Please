@@ -1,0 +1,24 @@
+{
+  "name": "Exact-Change-Please",
+  "version": "1.0.0",
+  "description": "Simple application to determine how much change to return, based on cost and the payment provided.  Utilizes common U.S. currency denominations.",
+  "main": "getChange.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThoughtFool/Exact-Change-Please.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThoughtFool/Exact-Change-Please/issues"
+  },
+  "homepage": "https://github.com/ThoughtFool/Exact-Change-Please#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

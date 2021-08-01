@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.penny {
+    height: 55px;
+    width: 55px;
+}
+
+.nickel {
+    height: 60px;
+    width: 60px;
+}
+
+.dime {
+    height: 50px;
+    width: 50px;
+}
+
+.quarter {
+    height: 65px;
+    width: 65px;
+}
+
+#total-change .dollar,
+.five,
+.ten,
+.twenty,
+.fifty,
+.hundred {
+    height: 125px;
+    width: 275px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-area, .change-area {
+    z-index: 2;
+    padding: 25px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+    opacity: .8;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.change-area {
+    z-index: 2;
+    background-color: gray;
+    transition: all 1s linear;
+}
+
+#total-change {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#total-change>div {
+    margin: 5px;
+}
+
+li {
+    margin-top: 10px;
+}
+
+.jumbotron {
+    background-color: rgb(73, 11, 131);
+    color: antiquewhite;
+    padding: 50px;
+    margin-bottom: 10px;
+}
+
+.fullscreen-bg {
+    z-index: -10;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: auto;
+    overflow: hidden;
+    background: no-repeat center center fixed;
+}
+
+body > .overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(103, 93, 104);
+    opacity: 0.75;
+    z-index: -1;
+}
+
+.form-group {
+    display: flex;
+    /* justify-content: right; */
+    margin: auto;
+    flex-direction: column;
+}
+
+.directions {
+    text-align: justify;
+    /* text-justify: inter-word; */
+}
+
+.cashier {
+    padding: 0px 15px 0px 15px;
+}
